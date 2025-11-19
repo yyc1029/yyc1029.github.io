@@ -9,65 +9,68 @@
             font-family: "Times New Roman", serif;
         }
 
-        /* 外框 + 卡片陰影（老師版本是淡灰色、柔光） */
+        /* 外層容器：有黑邊 + 淡灰陰影 */
         .container {
             width: 900px;
             margin: 40px auto;
             background: white;
-            padding: 30px;
+            padding: 35px;
             border: 2px solid black;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 20px rgba(0,0,0,0.35);
         }
 
-        /* ---------------------------------------- */
-        /*                 HEADING 1                */
-        /* ---------------------------------------- */
+        /* -----------------------------
+               HEADING 1
+        ------------------------------ */
         h1 {
             font-size: 42px;
             font-weight: 900;
-            color: black;
-            margin: 0 0 35px 0;
+            margin: 0 0 40px 0;
             padding: 5px 0;
+
+            color: black;
 
             /* 上方粗黑線 */
             border-top: 5px solid black;
 
-            /* 上方線條的微紅色 shadow（老師版是超薄 1~2px）*/
+            /* 上方紅色立體影（老師圖是薄薄一條） */
             box-shadow: 0 -5px 0 rgba(255, 80, 80, 0.45);
 
             /* 下方細黑線 */
             border-bottom: 2px solid black;
 
-            /* 文字本身也有淡淡紅色陰影（老師版是很輕） */
+            /* 字體紅色陰影（很輕） */
             text-shadow: 2px 2px 3px rgba(255, 80, 80, 0.45);
         }
 
-        /* ---------------------------------------- */
-        /*                 HEADING 2                */
-        /* ---------------------------------------- */
+        /* -----------------------------
+               HEADING 2
+        ------------------------------ */
         h2 {
             font-size: 30px;
             font-style: italic;
             color: #0b1d40;
-            padding: 10px 12px;
-            margin: 0 0 60px 0;
+            padding: 12px;
 
-            /* 內層黑框（非常薄） */
+            /* 內層黑框（2px） */
             border: 2px solid black;
 
-            /* 外層黃色立體邊框（老師版本是 3px 左右） */
-            box-shadow: 0 0 0 4px #c1b233;
+            /* 外層黃色框（老師 PPT 要用 outline） */
+            outline: 4px solid #c9b428;
+            outline-offset: 0;
+
+            margin: 0 0 60px 0;
         }
 
-        /* ---------------------------------------- */
-        /*                 HEADING 3                */
-        /* ---------------------------------------- */
+        /* -----------------------------
+               HEADING 3
+        ------------------------------ */
         h3 {
             font-size: 28px;
-            font-weight: 700;
+            font-weight: bold;
             color: #0b1d40;
-            text-align: right;
             text-decoration: underline;
+            text-align: right;
             margin: 0;
         }
     </style>
