@@ -9,55 +9,65 @@
             font-family: "Times New Roman", serif;
         }
 
+        /* 外框 + 卡片陰影（老師版本是淡灰色、柔光） */
         .container {
             width: 900px;
             margin: 40px auto;
             background: white;
             padding: 30px;
-            border: 3px solid black;
-            box-shadow: 0 0 25px rgba(0,0,0,0.35);
+            border: 2px solid black;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
         }
 
-        /* Heading 1 — 字也有紅色陰影 */
+        /* ---------------------------------------- */
+        /*                 HEADING 1                */
+        /* ---------------------------------------- */
         h1 {
             font-size: 42px;
             font-weight: 900;
-            color: #000;
-            margin: 0 0 40px 0;
-            padding-top: 5px;
-            padding-bottom: 10px;
+            color: black;
+            margin: 0 0 35px 0;
+            padding: 5px 0;
 
-            /* 上方線條 + 紅色陰影 */
-            border-top: 6px solid black;
-            box-shadow: 0 -6px 0 rgba(255, 0, 0, 0.65);
+            /* 上方粗黑線 */
+            border-top: 5px solid black;
 
-            /* 下方線條 */
-            border-bottom: 3px solid black;
+            /* 上方線條的微紅色 shadow（老師版是超薄 1~2px）*/
+            box-shadow: 0 -5px 0 rgba(255, 80, 80, 0.45);
 
-            /* 文字紅色陰影（向右下） */
-            text-shadow: 3px 3px 3px rgba(255, 0, 0, 0.65);
+            /* 下方細黑線 */
+            border-bottom: 2px solid black;
+
+            /* 文字本身也有淡淡紅色陰影（老師版是很輕） */
+            text-shadow: 2px 2px 3px rgba(255, 80, 80, 0.45);
         }
 
-        /* Heading 2 — Black border + yellow 3D outer box */
+        /* ---------------------------------------- */
+        /*                 HEADING 2                */
+        /* ---------------------------------------- */
         h2 {
-            font-size: 32px;
+            font-size: 30px;
             font-style: italic;
-            color: #001b40;
-            padding: 10px;
-
-            border: 2px solid black;      /* inner black frame */
-            box-shadow: 0 0 0 5px #c8b400; /* outer yellow frame */
-
+            color: #0b1d40;
+            padding: 10px 12px;
             margin: 0 0 60px 0;
+
+            /* 內層黑框（非常薄） */
+            border: 2px solid black;
+
+            /* 外層黃色立體邊框（老師版本是 3px 左右） */
+            box-shadow: 0 0 0 4px #c1b233;
         }
 
-        /* Heading 3 — No shadow */
+        /* ---------------------------------------- */
+        /*                 HEADING 3                */
+        /* ---------------------------------------- */
         h3 {
             font-size: 28px;
-            font-weight: bold;
-            color: #001b40;
-            text-decoration: underline;
+            font-weight: 700;
+            color: #0b1d40;
             text-align: right;
+            text-decoration: underline;
             margin: 0;
         }
     </style>
