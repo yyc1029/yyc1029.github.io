@@ -38,10 +38,16 @@
         /* --- 標題 2 的樣式 --- */
         h2 {
             font-size: 24px;
-            font-weight: normal; /* 圖片中的 h2 看起來沒有特別加粗 */
-            font-style: italic; /* 斜體字 */
-            border: 3px solid #d4d400; /* 黃色實線邊框 */
-            padding: 5px; /* 讓文字跟邊框留一點距離 */
+            font-weight: normal;
+            font-style: italic; /* 斜體 */
+            
+            /* --- 這裡是用來做雙層框的關鍵 --- */
+            border: 1px solid black;    /* 1. 裡面那層：細的黑色實線 */
+            outline: 5px solid #dede00; /* 2. 外面那層：粗的黃色輪廓 */
+            /* ----------------------------- */
+            
+            padding: 5px;  /* 文字跟黑線的距離 */
+            margin-top: 10px; /* 因為 outline 往外長，如果不加一點間距，可能會跟上面撞在一起 */
             margin-bottom: 20px;
         }
 
