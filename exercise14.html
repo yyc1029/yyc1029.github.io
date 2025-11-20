@@ -1,89 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 14</title>
     <style>
+        /* 這裡是設定網頁整體樣式的部分 */
         body {
-            background-color: #eeeeee;
-            font-family: "Times New Roman", serif;
-        }
-
-        /* 外層容器：有黑邊 + 淡灰陰影 */
-        .container {
-            width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 35px;
-            border: 2px solid black;
-            box-shadow: 0 0 20px rgba(0,0,0,0.35);
-        }
-
-        /* -----------------------------
-               HEADING 1
-        ------------------------------ */
-        h1 {
-            font-size: 42px;
-            font-weight: 900;
-            margin: 0 0 40px 0;
-            padding: 5px 0;
-
-            color: black;
-
-            /* 上方粗黑線 */
-            border-top: 5px solid black;
-
-            /* 上方紅色立體影（老師圖是薄薄一條） */
-            box-shadow: 0 -5px 0 rgba(255, 80, 80, 0.45);
-
-            /* 下方細黑線 */
-            border-bottom: 2px solid black;
-
-            /* 字體紅色陰影（很輕） */
-            text-shadow: 2px 2px 3px rgba(255, 80, 80, 0.45);
-        }
-
-        /* -----------------------------
-               HEADING 2
-        ------------------------------ */
-        h2 {
-            font-size: 30px;
-            font-style: italic;
-            color: #0b1d40;
-            padding: 12px;
-
-            /* 內層黑框（2px） */
-            border: 2px solid black;
-
-            /* 外層黃色框（老師 PPT 要用 outline） */
-            outline: 4px solid #c9b428;
-            outline-offset: 0;
-
-            margin: 0 0 60px 0;
-        }
-
-        /* -----------------------------
-               HEADING 3
-        ------------------------------ */
-        h3 {
-            font-size: 28px;
-            font-weight: bold;
-            color: #0b1d40;
-            text-decoration: underline;
-            text-align: right;
+            font-family: "Times New Roman", Times, serif; /* 設定為襯線字體，符合圖片風格 */
+            background-color: #f0f0f0; /* 背景設為淡灰，讓中間的白色卡片更明顯 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
+        }
+
+        /* 模擬圖片中白色卡片的容器 */
+        .container {
+            background-color: white;
+            width: 500px; /* 設定卡片寬度 */
+            padding: 30px; /* 內距 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.3); /* 加上卡片陰影效果 */
+        }
+
+        /* --- 標題 1 的樣式 --- */
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            /* 上方的一條黑線 */
+            text-decoration: overline; 
+            /* 粉紅色的文字陰影：水平位移 垂直位移 模糊半徑 顏色 */
+            text-shadow: 3px 3px 0px #ffcccc; 
+            margin-bottom: 20px;
+        }
+
+        /* --- 標題 2 的樣式 --- */
+        h2 {
+            font-size: 24px;
+            font-weight: normal; /* 圖片中的 h2 看起來沒有特別加粗 */
+            font-style: italic; /* 斜體字 */
+            border: 3px solid #d4d400; /* 黃色實線邊框 */
+            padding: 5px; /* 讓文字跟邊框留一點距離 */
+            margin-bottom: 20px;
+        }
+
+        /* --- 標題 3 的樣式 --- */
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right; /* 文字靠右對齊 */
+            text-decoration: underline; /* 下底線 */
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>This is heading 1</h1>
-
-    <h2>This is heading 2</h2>
-
-    <h3>This is heading 3</h3>
-</div>
+    <div class="container">
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+    </div>
 
 </body>
 </html>
