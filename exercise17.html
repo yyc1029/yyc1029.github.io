@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 17 Fix</title>
+    <style>
+        /* 基本背景與容器 */
+        body {
+            background-color: #8db5e7; /* 外層背景藍 */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-sizing: border-box; /* 確保 padding 不影響寬度 */
+        }
+
+        /* 綠色頂部 */
+        .header {
+            background-color: #b8d96a;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* 中間藍色區塊容器 (關鍵所在) */
+        .main-content {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            min-height: 100px; /* 給予最小高度確保顯示 */
+        }
+
+        .blue-box {
+            background-color: #78c2d1;
+            flex: 1;
+            height: 180px; /* 預設高度 */
+            border-radius: 5px;
+            display: block; /* 確保它是區塊顯示 */
+        }
+
+        /* 底部灰色區塊 */
+        .footer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gray-box {
+            background-color: #f1f3f4;
+            height: 60px;
+            flex: 1;
+            border-radius: 5px;
+        }
+
+        /* --- 響應式修正 --- */
+        @media (max-width: 720px) {
+            .main-content {
+                flex-direction: column; /* 垂直排列藍色區塊 */
+            }
+
+            .blue-box {
+                width: 100%;    /* 強制寬度填滿 */
+                height: 80px;   /* 手機版給予明確高度，避免縮小到 0 */
+                flex: none;     /* 關閉彈性分配，固定高度 */
+            }
+
+            .footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* 底部變 2x2 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"></div>
+
+        <div class="main-content">
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+        </div>
+
+        <div class="footer">
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+        </div>
+    </div>
+
+</body>
+</html>
