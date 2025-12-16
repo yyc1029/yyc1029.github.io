@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition 練習 (Exercise 16)</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        /* 共同樣式 */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #f2c2c9; /* 圖片中的粉色 */
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            transition: all 0.5s ease; /* 設定平滑過渡效果 */
+        }
+
+        /* 正方形 1: 滑鼠移入變長 (寬度增加) */
+        .sq1:hover {
+            width: 400px; /* 變長 */
+        }
+
+        /* 正方形 2: 滑鼠移入變大 (寬度與高度同時增加) */
+        .sq2:hover {
+            width: 150px;
+            height: 150px; /* 整體變大 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square sq1">1</div>
+
+    <div class="square sq2">2</div>
+
+</body>
+</html>
